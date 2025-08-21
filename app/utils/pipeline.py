@@ -5,7 +5,7 @@ from app.agents.legal_framework import legal_framework_agent
 from app.agents.negotiation import negotiation_agent
 from app.agents.manager import manager_agent
 
-MAX_CHARS = int(os.getenv("MAX_CHARS_PER_CALL", "12000"))  # limite pour réduire les tokens
+MAX_CHARS = int(os.getenv("MAX_CHARS_PER_CALL", "12000")) 
 
 def _chunks(text: str, n: int) -> List[str]:
     text = text.strip()

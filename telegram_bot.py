@@ -2,9 +2,8 @@ import os
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
-from agno_agents import run_multi_agent_system  # <- ton module multi-agent
+from agno_agents import run_multi_agent_system  
 
-# Charger le .env
 load_dotenv()
 
 # Récupérer le token
@@ -34,7 +33,7 @@ async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE):
     os.makedirs("./tmp", exist_ok=True)
     await file.download_to_drive(file_path)
 
-    await update.message.reply_text("Fichier reçu ! Analyse en cours... ⏳")
+    await update.message.reply_text("Fichier reçu ! Analyse en cours... ")
 
     # Appel au système multi-agent
     try:

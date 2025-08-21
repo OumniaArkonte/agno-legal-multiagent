@@ -4,7 +4,6 @@ import os
 from app.utils.io import any_to_text
 from app.utils.pipeline import process_contract
 
-# Charger les variables d'environnement (.env)
 load_dotenv()
 
 # Forcer l’utilisation de Gemini (via Agno)

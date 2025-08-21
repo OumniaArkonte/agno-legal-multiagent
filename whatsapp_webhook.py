@@ -3,7 +3,7 @@ import os
 import json
 import pdfplumber
 from dotenv import load_dotenv
-from agno_agents import run_multi_agent_system  # <-- ton module pour les 3 agents + manager
+from agno_agents import run_multi_agent_system  
 
 load_dotenv()
 
@@ -60,9 +60,7 @@ def whatsapp_webhook():
     
     if request.method == "POST":
         data = request.json
-        # Ici tu peux récupérer les fichiers envoyés via WhatsApp
-        # Exemple : message text ou media
-        # TODO: appeler run_multi_agent_system avec le contenu du fichier
+
         print(json.dumps(data, indent=2))
         return jsonify({"status": "received"})
 
